@@ -191,7 +191,6 @@ nav {
     padding: 1em;
     text-align: left;
   }
-
   ul.data {
     display: flex;
     flex-wrap: wrap;
@@ -206,10 +205,59 @@ nav {
     justify-content: center;
   }
   .panel ul.data li {
-    flex: 0 0 32%;
+    flex: 0 0 33%;
   }
-
   .panel ul.data li p {
     margin-bottom: 0;
   }
+  nav {
+    width: 40%;
+  }
+}
+
+@media (min-width: 720px) {
+  body {
+    padding: 1.5em;
+  }
+  .columns {
+    display: flex;
+  }
+  .col {
+    flex: 0 0 48%;
+  }
+  .secondary {
+    margin-left: 3em;
+  }
+  ul.secondary {
+    margin-top: 0;
+  }
+  nav {
+    width: 30%;
+  }
+}
+
+/*
+
+- White Space
+- Color 
+- Contrast 
+- Scale
+- Alignment
+- Typography
+- Visual Hierarchy
+
+*/
+
+/* Ignore this -- for displaying the viewport width */
+.width-container {
+  display: none;
+}
+.display-width {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #e6e6e6;
+  padding: 0.3em;
+  font-size: 0.85em;
 }
