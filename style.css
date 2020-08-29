@@ -236,28 +236,43 @@ nav {
   }
 }
 
-/*
+@media (min-width: 850px) {
+  body {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 70px auto;
+    grid-template-areas:
+      'sidebar header'
+      'sidebar main';
+    padding: 0;
+  }
 
-- White Space
-- Color 
-- Contrast 
-- Scale
-- Alignment
-- Typography
-- Visual Hierarchy
+  header,
+  main {
+    padding: 1.5em;
+  }
 
-*/
+  nav {
+    grid-area: sidebar;
+    opacity: 1;
+    visibility: unset;
+    transform: translateX(0);
+    width: 100%;
+    position: unset;
+  }
 
-/* Ignore this -- for displaying the viewport width */
-.width-container {
-  display: none;
-}
-.display-width {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #e6e6e6;
-  padding: 0.3em;
-  font-size: 0.85em;
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  a.logo {
+    margin: 0;
+  }
+  svg {
+    display: none;
+  }
 }
